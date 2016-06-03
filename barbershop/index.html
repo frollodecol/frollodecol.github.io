@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta lang='ru'>
+		<meta charset='utf-8'>
+		<link rel='stylesheet' href='css/normalize.min.css'>
+		<link rel='stylesheet' href='css/style.css'>
+		<title>Barbershop</title>
+	</head>
+	<body>
+			<header class="top-menu">
+					<div class="container container--head">
+						<ul class="top-nav">
+							<li>
+								<a href="#" class="top-nav__item top-nav__item--active">
+									Главная
+								</a>
+							</li>
+							<li>
+								<a href="#" class="top-nav__item">
+									Информация
+								</a>
+							</li>
+							<li>
+								<a href="#" class="top-nav__item">
+									Новости
+								</a>
+							</li>
+							<li>
+								<a href="#" class="top-nav__item">
+									Прайс-лист
+								</a>
+							</li>
+							<li>
+								<a href="#" class="top-nav__item">
+									Магазин
+								</a>
+							</li>
+							<li>
+								<a href="#" class="top-nav__item">
+									Контакты
+								</a>
+							</li>
+						</ul>
+
+						<a href="#" class="login">
+							Вход
+						</a>
+					</div>
+			</header>
+			<div class="container container--main">
+					<a href="#" class="logo"></a>
+					<section class="features">
+						<div class="feature">
+							<h2 class='feature__title'>Быстро</h2>
+							<p class="feature__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы - счастливый обладатель стильной стрижки-минутки!</p>
+						</div>
+						<div class="feature">
+							<h2 class='feature__title'>Круто</h2>
+							<p class="feature__description">Забудьте, как вы стриглись раньше! Мы сделаем из вас звезду футбола или кино! По крайней мере, внешне.</p>
+						</div>
+						<div class="feature">
+							<h2 class='feature__title'>Дорого</h2>
+							<p class="feature__description">Наши мастера - профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
+						</div>
+					</section>
+					<section class="tile">
+						<div class="news">
+							<h2 class="news__title">Новости</h2>
+							<div class="new">
+								<p>Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</p>
+								<p class="new__date">25 сентября</p>
+							</div>
+							<div class="new">
+								<p>В нашей команде пополнение, Борис "Бритва" СТРИГУНЕЦ, обладатель множества титулов и наград, пополнил наши стройные ряды</p>
+								<p class="new__date">19 сентября</p>
+							</div>
+							<a href="#" class="btn">
+								Все новости
+							</a>
+						</div>
+						<div class="photo-gallery">
+							<h2 class="photo-gallery__title">Фотогалерея</h2>
+							<img class='photo-gallery__image' src='pictures/1.jpg' width=286 height=164>
+							<div class="photo-gallery__buttons">
+								<a href="#" class="btn">Назад</a>
+								<a href="#" class="btn">Вперёд</a>
+							</div>
+						</div>
+					</section>
+					<section class="tile">
+						<div class="contacts">
+							<h2 class="contacts__title">Контактная информация</h2>
+							<p>
+							BARBERSHOP "BORODINSK"<br>
+							Адрес: г. Москва, ул. собаки Павлова, д. 13<br>
+							Телефон: +7 (495) 666-02-666 
+							</p>
+							<p>
+							Время работы:<br>
+							пн - пт: с 10:00 до 22:00<br>
+							сб - вс: с 10:00 до 19:00
+							</p>
+							<div class="contacts__buttons">
+								<a href="#" class="btn">Как проехать</a>
+								<a href="#" class="btn">Обратная связь</a>								
+							</div>
+						</div>
+						<div class="message">
+							<h2 class="message__title">Записаться</h2>
+							<p>Укажите желаемую дату и мы свяжемся с вами для подтверждения брони</p>
+							<form method='post' action='/echo'>
+								<div class="message__fields">
+									<input type='date' name='date' placeholder='Дата' required>
+									<input type='time' name='time' placeholder='Время' required>
+									<input type='text' name='username' placeholder='Ваше имя' required>
+									<input type='tel' name='tel' placeholder='Телефон' required>
+								</div>
+								<input class='btn btn--wide'type='submit' value='Отправить'> 
+							</form>
+						</div>
+					</section>
+			</div>
+			<footer class="footer">
+				<div class="container container--footer">
+					<p class=contacts--footer>
+						BARBERSHOP "BORODINSK"<br>
+						Адрес: г. Москва, ул. собаки Павлова, д. 13<br>
+						Телефон: +7 (495) 666-02-666 
+					</p>
+					<div class="share">
+						<h2 class="share__title">Давайте дружить!</h2>
+						<div class="share__icons">
+							<i class='share__icon share__icon--vk'></i>
+							<i class='share__icon share__icon--facebook'></i>
+							<i class='share__icon share__icon--inst'></i>
+						</div>
+					</div>
+					<div class="copyright">
+						<h2 class="copyright__title">Дизайн сайта</h2>
+						<a href="#" class="btn btn--copyright">Glukhanko.ru</a>
+					</div>
+				</div>
+			</footer>	
+	</body>
+</html>   
