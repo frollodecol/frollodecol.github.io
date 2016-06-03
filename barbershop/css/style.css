@@ -331,14 +331,16 @@ body {
 }
 .copyright {
 	width: 300px;
+	padding-left:160px;
 }
 .copyright__title {
+	width: 140px;
 	font-size: 14px;
 	line-height: 24px;
 	color: #fff;
 	margin: 0px;
 	margin-bottom: 5px;
-	text-align: right;
+	text-align: center;
 }
 .btn--copyright {
 	margin: 0;
