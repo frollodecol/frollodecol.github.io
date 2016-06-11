@@ -8,7 +8,11 @@
 		<title>Barbershop</title>
 	</head>
 	<body>
+
+<!-- ШАПКА -->
+
 			<header class="top-menu">
+
 					<div class="container container--head">
 						<ul class="top-nav">
 							<li>
@@ -47,9 +51,15 @@
 							Вход
 						</a>
 					</div>
+
 			</header>
+
+<!-- ОСНОВНОЕ СОДЕРЖИМОЕ -->
+
 			<div class="container container--main">
+
 					<a href="#" class="logo"></a>
+
 					<section class="features">
 						<div class="feature">
 							<h2 class='feature__title'>Быстро</h2>
@@ -64,6 +74,7 @@
 							<p class="feature__description">Наши мастера - профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
 						</div>
 					</section>
+
 					<section class="tile">
 						<div class="news">
 							<h2 class="news__title">Новости</h2>
@@ -88,6 +99,7 @@
 							</div>
 						</div>
 					</section>
+
 					<section class="tile">
 						<div class="contacts">
 							<h2 class="contacts__title">Контактная информация</h2>
@@ -120,8 +132,13 @@
 							</form>
 						</div>
 					</section>
+
 			</div>
+
+<!-- ПОДВАЛ -->
+
 			<footer class="footer">
+
 				<div class="container container--footer">
 					<p class=contacts--footer>
 						BARBERSHOP "BORODINSK"<br>
@@ -141,6 +158,29 @@
 						<a href="#" class="btn btn--copyright">Glukhanko.ru</a>
 					</div>
 				</div>
+
 			</footer>	
+
+<!-- МОДАЛЬНОЕ ОКОШКО ВХОДА -->
+
+			<div class="pop-up-login hidden">
+
+				<h2 class="pop-up-login__title">ЛИчный кабинет</h2>
+				<p>Введите, пожалуйста, свой логин и пароль</p>
+				<form method='post' action='#'>
+					<input class='pop-up-login__field-login' type='text' name='login' placeholder='Логин'>
+					<input class='pop-up-login__field-password' type='password' name='password' placeholder='Пароль'>
+					<input type='checkbox' name='remember-me' id='remember-me'>
+					<label class='pop-up-login__checkbox'for='remember-me'>Запомните меня</label>
+					<a href='#' class='pop-up-login__forgot-password'>Я забыл пароль!</a>
+					<input class='btn btn--pop-up-login' type='submit' value='Войти'>
+				</form>
+				<a href='#'class="pop-up-login__close"></a>
+
+			</div>
+
+
+
+			<script src='js/script.js'></script>
 	</body>
 </html>   
