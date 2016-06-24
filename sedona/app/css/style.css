@@ -582,9 +582,9 @@ textarea {
     height: 330px;
     width: 400px; }
     .features__tile:nth-child(4) .features__tile-icon {
-      background: url(../images/icon-house-black.svg) center center no-repeat; }
+      background: url(../images/icon-burger-black.png) center center no-repeat; }
       .features__tile:nth-child(4) .features__tile-icon:hover {
-        background: url(../images/icon-house-blue.svg) center center no-repeat; }
+        background: url(../images/icon-burger-blue.png) center center no-repeat; }
     .features__tile:nth-child(4) .features__tile-title {
       margin-bottom: 27px; }
     .features__tile:nth-child(4) .features__tile-description {
@@ -665,6 +665,30 @@ textarea {
         background-color: rgba(51, 51, 51, 0.8); }
       .features__tile:nth-child(10) .features__tile-number::before {
         background-color: rgba(51, 51, 51, 0.8); }
+
+.map {
+  background-color: #fff;
+  text-transform: uppercase;
+  text-align: center; }
+  .map::before {
+    content: '';
+    display: block;
+    height: 1px; }
+  .map__title {
+    font-family: 'PTSans Bold', sans-serif;
+    color: #000;
+    font-size: 30px;
+    margin: 55px auto 35px; }
+  .map__description {
+    width: 420px;
+    font-family: 'PTSans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333;
+    margin: 0px auto 135px; }
+  .map #map__google-map {
+    width: 100%;
+    height: 474px; }
 
 body {
   background-color: #f2f2f2;
