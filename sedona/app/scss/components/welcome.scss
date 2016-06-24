@@ -1,0 +1,50 @@
+.welcome {
+  position: relative;
+  height: 508px;
+  background: url(../images/photo-background@1x.jpg)  center 20% no-repeat;
+  border-bottom: 1px solid #fefefe;
+
+  @media (min-resolution: 1.5dppx) {
+    background: url(../images/photo-background@2x.jpg) center center no-repeat 50%;
+  }
+  &::before {
+    content: '';
+    display: block;
+    height: 1px;
+  }
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1200px;
+    height: 57px;
+    left: 0px;
+    top: 450px;
+    background: url(../images/welcome-shape.png) center center no-repeat;
+  }
+
+  &__welcome {
+    margin: 77px auto 10px;
+    height: 45px;
+    background: url(../images/text-welcome.svg) center center no-repeat;  
+  }
+
+  &__to-the-gorgeous {
+    margin: 0px auto 60px;
+    height: 26px;
+    background: url(../images/text-tothegorgeous.svg) center center no-repeat; 
+  }
+
+  &__sedona {
+    margin: 0px auto 55px;
+    height: 80px;
+    background: url(../images/text-sedona.svg) center center no-repeat; 
+  }
+
+    &__because-canyon {
+    margin: 0px auto;
+    height: 80px;
+    background: url(../images/text-becausecanyon.svg) center center no-repeat; 
+  }
+
+}

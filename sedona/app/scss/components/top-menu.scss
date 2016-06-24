@@ -18,6 +18,8 @@
   }
 
   &__logo {
+    position: relative;
+    z-index: 20;
     width: 137px;
     height: 70px;
     background: url('../images/logo-sedona@1x.png') center top no-repeat,
