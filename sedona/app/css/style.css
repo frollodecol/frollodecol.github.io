@@ -433,7 +433,7 @@ textarea {
   position: relative;
   height: 508px;
   background: url(../images/photo-background@1x.jpg) center 20% no-repeat;
-  border-bottom: 1px solid #fefefe; }
+  border-bottom: 0px solid #fefefe; }
   @media (min-resolution: 1.5dppx) {
     .welcome {
       background: url(../images/photo-background@2x.jpg) center center no-repeat 50%; } }
@@ -448,7 +448,7 @@ textarea {
     width: 1200px;
     height: 57px;
     left: 0px;
-    top: 450px;
+    top: 451px;
     background: url(../images/welcome-shape.png) center center no-repeat; }
   .welcome__welcome {
     margin: 77px auto 10px;
@@ -467,6 +467,205 @@ textarea {
     height: 80px;
     background: url(../images/text-becausecanyon.svg) center center no-repeat; }
 
+.features {
+  background-color: #fff;
+  text-transform: uppercase; }
+  .features::before {
+    content: '';
+    display: block;
+    height: 1px; }
+  .features__title {
+    font-family: 'PTSans Bold', sans-serif;
+    margin: 65px auto 35px;
+    width: 450px;
+    height: 48px;
+    line-height: 26px;
+    color: #000;
+    font-weight: bold;
+    font-size: 21px;
+    text-align: center; }
+  .features__description {
+    font-family: 'PTSans', sans-serif;
+    margin: 0px auto 55px;
+    width: 490px;
+    color: #333;
+    font-size: 14px;
+    text-align: center; }
+  .features__tiles {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; }
+  .features__tile {
+    margin: 0px;
+    padding: 0px;
+    text-transform: uppercase; }
+    .features__tile-title {
+      margin: 0px auto;
+      width: 160px;
+      font-size: 21px;
+      line-height: 26px;
+      font-family: 'PTSans Bold', sans-serif;
+      text-align: center; }
+    .features__tile-number {
+      position: relative;
+      margin: 0px auto;
+      width: 50px;
+      font-size: 14px;
+      line-height: 21px;
+      font-family: 'PTSans', sans-serif;
+      text-align: center; }
+      .features__tile-number::before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 9px;
+        background-color: rgba(51, 51, 51, 0.8);
+        top: 9px;
+        left: 0px; }
+      .features__tile-number::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 9px;
+        background-color: rgba(51, 51, 51, 0.8);
+        top: 9px;
+        left: 40px; }
+    .features__tile-description {
+      margin: 0px auto;
+      width: 270px;
+      font-size: 14px;
+      line-height: 21px;
+      font-family: 'PTSans', sans-serif;
+      text-align: center; }
+    .features__tile-icon {
+      margin: 60px auto 30px;
+      width: 74px;
+      height: 70px; }
+  .features__tile:nth-child(1) {
+    background-color: #81b3d2;
+    height: 256px;
+    width: 400px;
+    color: #fff; }
+    .features__tile:nth-child(1) .features__tile-title {
+      margin-top: 50px;
+      margin-bottom: 12px; }
+    .features__tile:nth-child(1) .features__tile-number {
+      margin-bottom: 25px; }
+      .features__tile:nth-child(1) .features__tile-number::before {
+        background-color: rgba(255, 255, 255, 0.8); }
+      .features__tile:nth-child(1) .features__tile-number::after {
+        background-color: rgba(255, 255, 255, 0.8); }
+  .features__tile:nth-child(2) {
+    background-color: #cac9d0;
+    background: url(../images/photo-city@1x.jpg) center center no-repeat;
+    height: 256px;
+    width: 800px; }
+    @media (min-resolution: 1.5dppx) {
+      .features__tile:nth-child(2) {
+        background: url(../images/photo-city@2x.jpg) center center no-repeat 50%; } }
+  .features__tile:nth-child(3) {
+    background-color: #fff;
+    height: 330px;
+    width: 400px; }
+    .features__tile:nth-child(3) .features__tile-icon {
+      background: url(../images/icon-house-black.svg) center center no-repeat; }
+      .features__tile:nth-child(3) .features__tile-icon:hover {
+        background: url(../images/icon-house-blue.svg) center center no-repeat; }
+    .features__tile:nth-child(3) .features__tile-title {
+      margin-bottom: 27px; }
+    .features__tile:nth-child(3) .features__tile-description {
+      color: #333; }
+  .features__tile:nth-child(4) {
+    background-color: #fff;
+    height: 330px;
+    width: 400px; }
+    .features__tile:nth-child(4) .features__tile-icon {
+      background: url(../images/icon-house-black.svg) center center no-repeat; }
+      .features__tile:nth-child(4) .features__tile-icon:hover {
+        background: url(../images/icon-house-blue.svg) center center no-repeat; }
+    .features__tile:nth-child(4) .features__tile-title {
+      margin-bottom: 27px; }
+    .features__tile:nth-child(4) .features__tile-description {
+      color: #333; }
+  .features__tile:nth-child(5) {
+    background-color: #fff;
+    height: 330px;
+    width: 400px; }
+    .features__tile:nth-child(5) .features__tile-icon {
+      background: url(../images/icon-gift-black.svg) center center no-repeat; }
+      .features__tile:nth-child(5) .features__tile-icon:hover {
+        background: url(../images/icon-gift-blue.svg) center center no-repeat; }
+    .features__tile:nth-child(5) .features__tile-title {
+      margin-bottom: 27px; }
+    .features__tile:nth-child(5) .features__tile-description {
+      color: #333; }
+  .features__tile:nth-child(6) {
+    background-color: #90462d;
+    background: url(../images/photo-bridge@1x.jpg) center center no-repeat;
+    height: 256px;
+    width: 800px; }
+    @media (min-resolution: 1.5dppx) {
+      .features__tile:nth-child(6) {
+        background: url(../images/photo-bridge@2x.jpg) center center no-repeat 50%; } }
+  .features__tile:nth-child(7) {
+    background-color: #81b3d2;
+    height: 256px;
+    width: 400px;
+    color: #fff; }
+    .features__tile:nth-child(7) .features__tile-title {
+      margin-top: 50px;
+      margin-bottom: 12px; }
+    .features__tile:nth-child(7) .features__tile-number {
+      margin-bottom: 25px; }
+      .features__tile:nth-child(7) .features__tile-number::before {
+        background-color: rgba(255, 255, 255, 0.8); }
+      .features__tile:nth-child(7) .features__tile-number::after {
+        background-color: rgba(255, 255, 255, 0.8); }
+  .features__tile:nth-child(8) {
+    background-color: #eee;
+    height: 256px;
+    width: 400px; }
+    .features__tile:nth-child(8) .features__tile-title {
+      margin-top: 50px;
+      margin-bottom: 16px; }
+    .features__tile:nth-child(8) .features__tile-number {
+      color: #333;
+      margin-bottom: 20px; }
+      .features__tile:nth-child(8) .features__tile-number::after {
+        background-color: rgba(51, 51, 51, 0.8); }
+      .features__tile:nth-child(8) .features__tile-number::before {
+        background-color: rgba(51, 51, 51, 0.8); }
+  .features__tile:nth-child(9) {
+    background-color: #eee;
+    height: 256px;
+    width: 400px; }
+    .features__tile:nth-child(9) .features__tile-title {
+      margin-top: 50px;
+      margin-bottom: 16px; }
+    .features__tile:nth-child(9) .features__tile-number {
+      color: #333;
+      margin-bottom: 20px; }
+      .features__tile:nth-child(9) .features__tile-number::after {
+        background-color: rgba(51, 51, 51, 0.8); }
+      .features__tile:nth-child(9) .features__tile-number::before {
+        background-color: rgba(51, 51, 51, 0.8); }
+  .features__tile:nth-child(10) {
+    background-color: #eee;
+    height: 256px;
+    width: 400px; }
+    .features__tile:nth-child(10) .features__tile-title {
+      margin-top: 50px;
+      margin-bottom: 16px; }
+    .features__tile:nth-child(10) .features__tile-number {
+      color: #333;
+      margin-bottom: 20px; }
+      .features__tile:nth-child(10) .features__tile-number::after {
+        background-color: rgba(51, 51, 51, 0.8); }
+      .features__tile:nth-child(10) .features__tile-number::before {
+        background-color: rgba(51, 51, 51, 0.8); }
+
 body {
   background-color: #f2f2f2;
   min-width: 1200px; }
@@ -479,6 +678,6 @@ html {
 
 .container {
   width: 1200px;
-  min-width: 1200px;
+  max-width: 1200px;
   margin: 0px auto;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); }
