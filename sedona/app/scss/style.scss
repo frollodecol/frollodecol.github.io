@@ -1,3 +1,15 @@
-p {
-  color: blue;
+@import 'components/fonts.scss';
+@import 'components/normalize.scss';
+@import 'components/top-menu.scss';
+
+body {
+  background-color: #f2f2f2;
+  min-width: 1200px;
 }
+.container {
+  width: 1200px;
+  min-width: 1200px;
+  margin: 0px auto;
+  box-shadow: 0px 0px 20px rgba(#000, .2);
+}
+

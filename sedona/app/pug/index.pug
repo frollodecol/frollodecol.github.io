@@ -1,11 +1,10 @@
 html
   head
     title Привет, мир!
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     //build:css css/style.min.css
     link(rel='stylesheet' href='css/style.css')
     //endbuild
   body
-    p Ещё раз привет, мир!
-    p Ты лжёшь, бастард!
-    p Тест
-    p Мадина шлюха
+    div.container
+        include components/top-menu.pug
