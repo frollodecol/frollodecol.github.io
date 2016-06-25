@@ -102,7 +102,7 @@
   &__tile:nth-child(1) {
     background-color: #81b3d2;
     min-height: 256px;
-    width: 400px;
+    width: 34%;
     color: #fff;
 
     .features__tile-title{
@@ -128,7 +128,7 @@
     background-color: #cac9d0;
     background: url(../images/photo-city@1x.jpg) center center no-repeat;
     min-height: 256px;
-    width: 800px;
+    width: 66%;
 
     @media (min-resolution: 1.5dppx) {
       background: url(../images/photo-city@2x.jpg) center center no-repeat 50%;
@@ -140,7 +140,7 @@
   &__tile:nth-child(3) {
     background-color: #fff;
     min-height: 330px;
-    width: 400px;
+    width: 33%;
 
     .features__tile-icon {
       background: url(../images/icon-house-black.svg) center center no-repeat;
@@ -164,7 +164,7 @@
   &__tile:nth-child(4) {
     background-color: #fff;
     min-height: 330px;
-    width: 400px;
+    width: 33%;
 
     .features__tile-icon {
       background: url(../images/icon-burger-black.png) center center no-repeat;
@@ -188,7 +188,7 @@
   &__tile:nth-child(5) {
     background-color: #fff;
     min-height: 330px;
-    width: 400px;
+    width: 33%;
 
     .features__tile-icon {
       background: url(../images/icon-gift-black.svg) center center no-repeat;
@@ -213,7 +213,7 @@
     background-color: #90462d;
     background: url(../images/photo-bridge@1x.jpg) center center no-repeat;
     min-height: 256px;
-    width: 800px;
+    width: 66%;
 
     @media (min-resolution: 1.5dppx) {
       background: url(../images/photo-bridge@2x.jpg) center center no-repeat 50%;
@@ -224,7 +224,7 @@
   &__tile:nth-child(7) {
     background-color: #81b3d2;
     min-height: 256px;
-    width: 400px;
+    width: 34%;
     color: #fff;
 
     .features__tile-title{
@@ -249,7 +249,7 @@
   &__tile:nth-child(8) {
     background-color: #eee;
     min-height: 256px;
-    width: 400px;
+    width: 33%;
 
     .features__tile-title {
       margin-top: 50px;
@@ -273,7 +273,7 @@
   &__tile:nth-child(9) {
     background-color: #eee;
     min-height: 256px;
-    width: 400px;
+    width: 34%;
 
     .features__tile-title {
       margin-top: 50px;
@@ -296,7 +296,7 @@
   &__tile:nth-child(10) {
     background-color: #eee;
     min-height: 256px;
-    width: 400px;
+    width: 33%;
 
     .features__tile-title {
       margin-top: 50px;

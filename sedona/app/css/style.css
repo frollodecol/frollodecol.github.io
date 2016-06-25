@@ -467,11 +467,15 @@ textarea {
     content: '';
     display: block;
     position: absolute;
-    width: 1200px;
+    width: 100%;
     height: 57px;
     left: 0px;
     top: 451px;
-    background: url(../images/welcome-shape.png) center center no-repeat; }
+    background: url(../images/welcome-shape.png) center center no-repeat;
+    -webkit-background-size: 101% 57px;
+    -moz-background-size: 101% 57px;
+    -o-background-size: 101% 57px;
+    background-size: 101% 57px; }
   .welcome__welcome {
     margin: 77px auto 10px;
     height: 45px;
@@ -578,7 +582,7 @@ textarea {
   .features__tile:nth-child(1) {
     background-color: #81b3d2;
     min-height: 256px;
-    width: 400px;
+    width: 34%;
     color: #fff; }
     .features__tile:nth-child(1) .features__tile-title {
       margin-top: 50px;
@@ -593,14 +597,14 @@ textarea {
     background-color: #cac9d0;
     background: url(../images/photo-city@1x.jpg) center center no-repeat;
     min-height: 256px;
-    width: 800px; }
+    width: 66%; }
     @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
       .features__tile:nth-child(2) {
         background: url(../images/photo-city@2x.jpg) center center no-repeat 50%; } }
   .features__tile:nth-child(3) {
     background-color: #fff;
     min-height: 330px;
-    width: 400px; }
+    width: 33%; }
     .features__tile:nth-child(3) .features__tile-icon {
       background: url(../images/icon-house-black.svg) center center no-repeat; }
       .features__tile:nth-child(3) .features__tile-icon:hover {
@@ -612,7 +616,7 @@ textarea {
   .features__tile:nth-child(4) {
     background-color: #fff;
     min-height: 330px;
-    width: 400px; }
+    width: 33%; }
     .features__tile:nth-child(4) .features__tile-icon {
       background: url(../images/icon-burger-black.png) center center no-repeat; }
       .features__tile:nth-child(4) .features__tile-icon:hover {
@@ -624,7 +628,7 @@ textarea {
   .features__tile:nth-child(5) {
     background-color: #fff;
     min-height: 330px;
-    width: 400px; }
+    width: 33%; }
     .features__tile:nth-child(5) .features__tile-icon {
       background: url(../images/icon-gift-black.svg) center center no-repeat; }
       .features__tile:nth-child(5) .features__tile-icon:hover {
@@ -637,14 +641,14 @@ textarea {
     background-color: #90462d;
     background: url(../images/photo-bridge@1x.jpg) center center no-repeat;
     min-height: 256px;
-    width: 800px; }
+    width: 66%; }
     @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
       .features__tile:nth-child(6) {
         background: url(../images/photo-bridge@2x.jpg) center center no-repeat 50%; } }
   .features__tile:nth-child(7) {
     background-color: #81b3d2;
     min-height: 256px;
-    width: 400px;
+    width: 34%;
     color: #fff; }
     .features__tile:nth-child(7) .features__tile-title {
       margin-top: 50px;
@@ -658,7 +662,7 @@ textarea {
   .features__tile:nth-child(8) {
     background-color: #eee;
     min-height: 256px;
-    width: 400px; }
+    width: 33%; }
     .features__tile:nth-child(8) .features__tile-title {
       margin-top: 50px;
       margin-bottom: 16px; }
@@ -672,7 +676,7 @@ textarea {
   .features__tile:nth-child(9) {
     background-color: #eee;
     min-height: 256px;
-    width: 400px; }
+    width: 34%; }
     .features__tile:nth-child(9) .features__tile-title {
       margin-top: 50px;
       margin-bottom: 16px; }
@@ -686,7 +690,7 @@ textarea {
   .features__tile:nth-child(10) {
     background-color: #eee;
     min-height: 256px;
-    width: 400px; }
+    width: 33%; }
     .features__tile:nth-child(10) .features__tile-title {
       margin-top: 50px;
       margin-bottom: 16px; }
@@ -1018,6 +1022,9 @@ textarea {
 body {
   background-color: #f2f2f2;
   min-width: 1200px; }
+  @media (max-width: 850px) {
+    body {
+      min-width: 768px; } }
 
 html {
   -webkit-box-sizing: border-box;
@@ -1036,3 +1043,19 @@ html {
   -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); }
+  @media (max-width: 850px) {
+    .container {
+      max-width: 768px;
+      width: 768px;
+      margin: 0px auto; } }
+
+/* @media(max-width: 800px) {
+  .container {
+    max-width: 768px;
+    width: 768px;
+    margin: 0px auto;
+  }
+  body {
+    min-width: 768px;
+  }
+} */
