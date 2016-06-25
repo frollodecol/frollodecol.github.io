@@ -16,11 +16,12 @@
     content: '';
     display: block;
     position: absolute;
-    width: 1200px;
+    width: 100%;
     height: 57px;
     left: 0px;
     top: 451px;
     background: url(../images/welcome-shape.png) center center no-repeat;
+    background-size: 101% 57px;
   }
 
   &__welcome {
