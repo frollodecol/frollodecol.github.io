@@ -102,9 +102,9 @@ gulp.task('clean:dist', function() {
 //Autoprefixer
 
 gulp.task('autoprefixer', function () {
-  return gulp.src('app/scss/*.scss')
+  return gulp.src('app/css/*.css')
     .pipe(autoprefixer({
-      browsers: ['> 0%'],
+      browsers: ['> 0.01%'],
       cascade: false
     }))
     .pipe(gulp.dest('app/css'));
@@ -129,7 +129,7 @@ gulp.task('sprite', function() {
 // ---------------
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'pug', 'autoprefixer', 'browserSync', 'watch'],
+  runSequence(['sass', 'pug', 'browserSync', 'watch'], 'autoprefixer',
     callback
   )
 })
@@ -137,7 +137,7 @@ gulp.task('default', function(callback) {
 gulp.task('build', function(callback) {
   runSequence(
     'clean:dist', 'sprite', 
-    ['sass','pug', 'autoprefixer', 'useref', 'images', 'fonts'],
+    ['sass','pug',  'useref', 'images', 'fonts'], 'autoprefixer',
     callback
   )
 })
