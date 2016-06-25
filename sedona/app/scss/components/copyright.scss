@@ -1,0 +1,47 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  font-family: 'PTSans', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  &__by {
+    display: flex;
+      align-items: center;
+  }
+
+  &__for {
+    display: flex;
+    align-items: center;
+  }
+
+  [class^='copyright__icon'] {
+    display: block;
+    width: 45px;
+    height: 35px;
+
+  }
+
+  &__icon--glukhanko {
+    background: url(../images/logo-glukhanko-black.svg) center center no-repeat;
+
+    &:hover {
+      background-image: url(../images/logo-glukhanko-blue.svg) 
+    }
+    &:active {
+      background-image: url(../images/logo-glukhanko-gray.svg) 
+    }
+  }
+
+
+  &__icon--htmlacademy {
+    background: url(../images/logo-htmlacademy-black.svg) center center no-repeat;
+
+    &:hover {
+      background-image: url(../images/logo-htmlacademy-blue.svg) 
+    }
+    &:active {
+      background-image: url(../images/logo-htmlacademy-gray.svg) 
+    }
+  }
+}

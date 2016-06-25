@@ -1,0 +1,49 @@
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__social-link {
+    position: relative;
+    width: 46px;
+    height: 48px;
+    background-color: #81b3d2;
+    margin: 3px;
+
+    &:hover {
+      background-color: #669ec0;
+    }
+    &:active {
+      background-color: #5496bd;
+    }
+  }
+
+  [class^=social-links__icon] {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__social-link:active [class^=social-links__icon] {
+    opacity: .5;
+  }
+
+  &__icon--twitter {
+    background: url(../images/icon-twitter.svg) center center no-repeat;
+  }
+
+  &__icon--facebook {
+    background: url(../images/icon-facebook.svg) center center no-repeat;
+  }
+
+  &__icon--youtube {
+    background: url(../images/icon-youtube.svg) center center no-repeat;
+  }
+
+
+}

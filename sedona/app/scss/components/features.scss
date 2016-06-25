@@ -12,7 +12,7 @@
     font-family: 'PTSans Bold', sans-serif;
     margin: 65px auto 35px;
     width: 450px;
-    height: 48px;
+    min-height: 48px;
     line-height: 26px;   
     color: #000;
     font-weight: bold;
@@ -101,7 +101,7 @@
 
   &__tile:nth-child(1) {
     background-color: #81b3d2;
-    height: 256px;
+    min-height: 256px;
     width: 400px;
     color: #fff;
 
@@ -127,7 +127,7 @@
   &__tile:nth-child(2) {
     background-color: #cac9d0;
     background: url(../images/photo-city@1x.jpg) center center no-repeat;
-    height: 256px;
+    min-height: 256px;
     width: 800px;
 
     @media (min-resolution: 1.5dppx) {
@@ -139,7 +139,7 @@
 
   &__tile:nth-child(3) {
     background-color: #fff;
-    height: 330px;
+    min-height: 330px;
     width: 400px;
 
     .features__tile-icon {
@@ -163,7 +163,7 @@
 
   &__tile:nth-child(4) {
     background-color: #fff;
-    height: 330px;
+    min-height: 330px;
     width: 400px;
 
     .features__tile-icon {
@@ -187,7 +187,7 @@
 
   &__tile:nth-child(5) {
     background-color: #fff;
-    height: 330px;
+    min-height: 330px;
     width: 400px;
 
     .features__tile-icon {
@@ -212,7 +212,7 @@
   &__tile:nth-child(6) {
     background-color: #90462d;
     background: url(../images/photo-bridge@1x.jpg) center center no-repeat;
-    height: 256px;
+    min-height: 256px;
     width: 800px;
 
     @media (min-resolution: 1.5dppx) {
@@ -223,7 +223,7 @@
 
   &__tile:nth-child(7) {
     background-color: #81b3d2;
-    height: 256px;
+    min-height: 256px;
     width: 400px;
     color: #fff;
 
@@ -248,7 +248,7 @@
 
   &__tile:nth-child(8) {
     background-color: #eee;
-    height: 256px;
+    min-height: 256px;
     width: 400px;
 
     .features__tile-title {
@@ -272,7 +272,7 @@
 
   &__tile:nth-child(9) {
     background-color: #eee;
-    height: 256px;
+    min-height: 256px;
     width: 400px;
 
     .features__tile-title {
@@ -295,7 +295,7 @@
 
   &__tile:nth-child(10) {
     background-color: #eee;
-    height: 256px;
+    min-height: 256px;
     width: 400px;
 
     .features__tile-title {
