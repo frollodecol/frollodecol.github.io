@@ -81,6 +81,20 @@
         <h2 class="map__title">Заинтересовались?</h2>
         <p class="map__description">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <div id="map__google-map"></div>
+        <div class="hotel-form">
+          <h2 class="hotel-form__title">Поиск гостиницы в седоне</h2>
+          <form class="hotel-form__content" action="#" method="post">
+            <label class="hotel-form__label--entry-date" for="">Дата заезда:<i class="hotel-form__icon-calendar--entry-date"></i></label>
+            <input class="hotel-form__input--entry-date" type="text" id="exit-date" name="entry-date" value="24 апреля 2014"/>
+            <label class="hotel-form__label--exit-date">Дата выезда:<i class="hotel-form__icon-calendar--entry-date"></i></label>
+            <input class="hotel-form__input--exit-date" type="text" id="exit-date" name="exit-date" value="4 июля 2014"/>
+            <label class="hotel-form__label--adults">Взрослые:<i class="hotel-form__icon-minus--adults"></i><i class="hotel-form__icon-plus--adults"></i></label>
+            <input class="hotel-form__input--adults" type-'text="type-'text" id="adults" name="adults" value="2"/>
+            <label class="hotel-form__label--children">Дети:<i class="hotel-form__icon-minus--children"></i><i class="hotel-form__icon-plus--children"></i></label>
+            <input class="hotel-form__input--children" type="text" id="children" name="children" value="0"/>
+            <input class="hotel-form__input--submit" type="submit" value="Найти"/>
+          </form>
+        </div>
       </div>
       <footer class="footer">
         <div class="footer__tag">#visitsedona</div>

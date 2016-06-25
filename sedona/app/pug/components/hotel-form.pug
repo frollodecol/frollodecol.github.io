@@ -1,0 +1,21 @@
+div.hotel-form
+  h2.hotel-form__title Поиск гостиницы в седоне
+  form.hotel-form__content(action='#' method='post')
+    label.hotel-form__label--entry-date(for='') Дата заезда:
+      i.hotel-form__icon-calendar--entry-date
+    input.hotel-form__input--entry-date(type='text' id='exit-date' name='entry-date' value='24 апреля 2014')
+    label.hotel-form__label--exit-date Дата выезда:
+      i.hotel-form__icon-calendar--entry-date
+    input.hotel-form__input--exit-date(type='text' id='exit-date' name='exit-date' value='4 июля 2014')
+    label.hotel-form__label--adults Взрослые:
+      i.hotel-form__icon-minus--adults
+      i.hotel-form__icon-plus--adults
+    input.hotel-form__input--adults(type-'text' id='adults' name='adults' value='2')
+    label.hotel-form__label--children Дети:
+      i.hotel-form__icon-minus--children
+      i.hotel-form__icon-plus--children
+    input.hotel-form__input--children(type='text' id='children' name='children' value='0')
+    input.hotel-form__input--submit(type='submit' value='Найти')
+
+
+
