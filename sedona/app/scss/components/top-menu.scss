@@ -12,6 +12,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin: 0px;
     padding: 0px;
     height: 56px;
@@ -22,18 +23,24 @@
     z-index: 20;
     width: 137px;
     height: 70px;
-    background: url('../images/logo-sedona@1x.png') center top no-repeat,
-                url('../images/form-logo-triangle.svg') center top no-repeat;
+    background: url('../images/form-logo-triangle.svg') center top no-repeat;
+    
+    &--second {
+      margin: 0px auto;
+      width: 50%;
+      height: 80%;
+      background: url('../images/logo-sedona@1x.png') center top no-repeat;
+      background-size: 100% 100%;
 
-    @media (min-resolution: 1.5dppx) {
-      background: url('../images/logo-sedona@2x.png') center top no-repeat 50%,
-      url('../images/form-logo-triangle.svg') center top no-repeat;            
+        @media (min-resolution: 1.5dppx) {    
+          background: url('../images/logo-sedona@2x.png') center top / 100% 100%no-repeat;
+        }
+
+        @media (min-resolution: 2.5dppx) {      
+          background: url('../images/logo-sedona@3x.png') center top / 100% 100% no-repeat;
+        }
     }
 
-     @media (min-resolution: 2.5dppx) {
-      background: url('../images/logo-sedona@3x.png') center top no-repeat 33%,
-      url('../images/form-logo-triangle.svg') center top no-repeat;            
-    }
        
   }
 

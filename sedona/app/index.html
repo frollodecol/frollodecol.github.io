@@ -15,7 +15,9 @@
         <ul class="top-menu__list">
           <li class="top-menu__item"><a class="top-menu__link top-menu__link--active" href="#">Информация</a></li>
           <li class="top-menu__item"><a class="top-menu__link" href="#">Фото и видео</a></li>
-          <div class="top-menu__logo"></div>
+          <div class="top-menu__logo">
+            <div class="top-menu__logo--second"></div>
+          </div>
           <li class="top-menu__item"><a class="top-menu__link" href="#">Карта штата</a></li>
           <li class="top-menu__item"><a class="top-menu__link" href="#">Гостиницы             </a></li>
         </ul>
@@ -39,7 +41,7 @@
           <div class="features__tile"> </div>
           <!--second string-->
           <div class="features__tile">
-            <div class="features__tile-icon"></div>
+            <div class="features__tile-icon icon-icon-house"></div>
             <div class="features__tile-title">Жильё</div>
             <div class="features__tile-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</div>
           </div>
@@ -49,7 +51,7 @@
             <div class="features__tile-description"> Всегда заказывай фирменный бургер, вы не разочаруетесь! </div>
           </div>
           <div class="features__tile">
-            <div class="features__tile-icon"></div>
+            <div class="features__tile-icon icon-icon-gift"></div>
             <div class="features__tile-title">Сувениры</div>
             <div class="features__tile-description"> Не только китайского, но и местного производства!</div>
           </div>
@@ -85,24 +87,32 @@
         <div class="hotel-form">
           <h2 class="hotel-form__title">Поиск гостиницы в седоне</h2>
           <form class="hotel-form__content" action="#" method="post">
-            <label class="hotel-form__label--entry-date" for="">Дата заезда:<i class="hotel-form__icon-calendar--entry-date"></i></label>
-            <input class="hotel-form__input--entry-date" type="text" id="exit-date" name="entry-date" value="24 апреля 2014"/>
-            <label class="hotel-form__label--exit-date">Дата выезда:<i class="hotel-form__icon-calendar--entry-date"></i></label>
-            <input class="hotel-form__input--exit-date" type="text" id="exit-date" name="exit-date" value="4 июля 2014"/>
-            <label class="hotel-form__label--adults">Взрослые:<i class="hotel-form__icon-minus--adults"></i><i class="hotel-form__icon-plus--adults"></i></label>
-            <input class="hotel-form__input--adults" type-'text="type-'text" id="adults" name="adults" value="2"/>
-            <label class="hotel-form__label--children">Дети:<i class="hotel-form__icon-minus--children"></i><i class="hotel-form__icon-plus--children"></i></label>
-            <input class="hotel-form__input--children" type="text" id="children" name="children" value="0"/>
+            <label class="hotel-form__label--entry-date" for="">Дата заезда:</label>
+            <div class="hotel-form__container-input--entry-date"><i class="hotel-form__calendar-entry-date icon-icon-calendar"></i>
+              <input class="hotel-form__input--entry-date" type="text" id="exit-date" name="entry-date" value="24 апреля 2014"/>
+            </div>
+            <label class="hotel-form__label--exit-date">Дата выезда:</label>
+            <div class="hotel-form__container-input--exit-date"><i class="hotel-form__calendar-exit-date icon-icon-calendar"></i>
+              <input class="hotel-form__input--exit-date" type="text" id="exit-date" name="exit-date" value="4 июля 2014"/>
+            </div>
+            <label class="hotel-form__label--adults">Взрослые:</label>
+            <div class="hotel-form__container-input--adults"><i class="hotel-form__plus-adults icon-icon-plus"></i><i class="hotel-form__minus-adults icon-icon-minus"> </i>
+              <input class="hotel-form__input--adults" type-'text="type-'text" id="adults" name="adults" value="2"/>
+            </div>
+            <label class="hotel-form__label--children">Дети:</label>
+            <div class="hotel-form__container-input--children">  <i class="hotel-form__plus-children icon-icon-plus"></i><i class="hotel-form__minus-children icon-icon-minus"> </i>
+              <input class="hotel-form__input--children" type="text" id="children" name="children" value="0"/>
+            </div>
             <input class="hotel-form__input--submit" type="submit" value="Найти"/>
           </form>
         </div>
       </div>
       <footer class="footer">
         <div class="footer__tag">#visitsedona</div>
-        <div class="social-links"><a class="social-links__social-link" href="#"><i class="social-links__icon--twitter"></i></a><a class="social-links__social-link" href="#"><i class="social-links__icon--facebook"></i></a><a class="social-links__social-link" href="#"><i class="social-links__icon--youtube"></i></a></div>
+        <div class="social-links"><a class="social-links__social-link" href="#"><i class="social-links__icon--twitter icon-icon-twitter"></i></a><a class="social-links__social-link" href="#"><i class="social-links__icon--facebook icon-icon-facebook"></i></a><a class="social-links__social-link" href="#"><i class="social-links__icon--youtube icon-icon-youtube"></i></a></div>
         <div class="copyright"> 
-          <div class="copyright__by">website by<i class="copyright__icon--glukhanko"></i></div>
-          <div class="copyright__for">for<i class="copyright__icon--htmlacademy">   </i></div>
+          <div class="copyright__by">website by<i class="copyright__icon--glukhanko icon-logo-glukhanko"></i></div>
+          <div class="copyright__for">for<i class="copyright__icon--htmlacademy icon-logo-htmlacademy">  </i></div>
         </div>
       </footer>
     </div>

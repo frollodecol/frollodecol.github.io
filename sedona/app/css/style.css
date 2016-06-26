@@ -10,6 +10,106 @@
   font-family: 'PTSans Italic';
   src: url(../fonts/PT_Sans-Web-italic.ttf); }
 
+@font-face {
+  font-family: 'Icon Font Sedona';
+  src: url(../fonts/icon-font-sedona.ttf);
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Icon Font Sedona' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-icon-calendar:before {
+  content: "\e900"; }
+
+.icon-icon-cross:before {
+  content: "\e901"; }
+
+.icon-icon-facebook:before {
+  content: "\e902"; }
+
+.icon-icon-gift:before {
+  content: "\e903"; }
+
+.icon-icon-house:before {
+  content: "\e904"; }
+
+.icon-icon-menu:before {
+  content: "\e905"; }
+
+.icon-icon-minus:before {
+  content: "\e906"; }
+
+.icon-icon-plus:before {
+  content: "\e907"; }
+
+.icon-icon-twitter:before {
+  content: "\e908"; }
+
+.icon-icon-youtube:before {
+  content: "\e909"; }
+
+.icon-logo-glukhanko:before {
+  content: "\e90a"; }
+
+.icon-logo-htmlacademy:before {
+  content: "\e90b"; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -225,8 +325,6 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -320,8 +418,6 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -347,8 +443,6 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -403,26 +497,11 @@ textarea {
   font-family: 'PTSans Bold', sans-serif;
   font-weight: bold; }
   .top-menu__list {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -moz-box-orient: horizontal;
-    -moz-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin: 0px;
     padding: 0px;
     height: 56px; }
@@ -431,13 +510,19 @@ textarea {
     z-index: 20;
     width: 137px;
     height: 70px;
-    background: url("../images/logo-sedona@1x.png") center top no-repeat, url("../images/form-logo-triangle.svg") center top no-repeat; }
-    @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
-      .top-menu__logo {
-        background: url("../images/logo-sedona@2x.png") center top no-repeat 50%, url("../images/form-logo-triangle.svg") center top no-repeat; } }
-    @media (-webkit-min-device-pixel-ratio: 2.5), (-o-min-device-pixel-ratio: 5/2), (min-resolution: 2.5dppx) {
-      .top-menu__logo {
-        background: url("../images/logo-sedona@3x.png") center top no-repeat 33%, url("../images/form-logo-triangle.svg") center top no-repeat; } }
+    background: url("../images/form-logo-triangle.svg") center top no-repeat; }
+    .top-menu__logo--second {
+      margin: 0px auto;
+      width: 50%;
+      height: 80%;
+      background: url("../images/logo-sedona@1x.png") center top no-repeat;
+      background-size: 100% 100%; }
+      @media (min-resolution: 1.5dppx) {
+        .top-menu__logo--second {
+          background: url("../images/logo-sedona@2x.png") center top/100% 100% no-repeat; } }
+      @media (min-resolution: 2.5dppx) {
+        .top-menu__logo--second {
+          background: url("../images/logo-sedona@3x.png") center top/100% 100% no-repeat; } }
   .top-menu__item {
     display: block;
     list-style: none; }
@@ -456,9 +541,9 @@ textarea {
   height: 508px;
   background: url(../images/photo-background@1x.jpg) center 20% no-repeat;
   border-bottom: 0px solid #fefefe; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  @media (min-resolution: 1.5dppx) {
     .welcome {
-      background: url(../images/photo-background@2x.jpg) center center no-repeat 50%; } }
+      background: url(../images/photo-background@2x.jpg) center center/100% 100% no-repeat; } }
   .welcome::before {
     content: '';
     display: block;
@@ -472,9 +557,6 @@ textarea {
     left: 0px;
     top: 451px;
     background: url(../images/welcome-shape.png) center center no-repeat;
-    -webkit-background-size: 101% 57px;
-    -moz-background-size: 101% 57px;
-    -o-background-size: 101% 57px;
     background-size: 101% 57px; }
   .welcome__welcome {
     margin: 77px auto 10px;
@@ -503,7 +585,6 @@ textarea {
   .features__title {
     font-family: 'PTSans Bold', sans-serif;
     margin: 65px auto 35px;
-    width: 450px;
     min-height: 48px;
     line-height: 26px;
     color: #000;
@@ -513,23 +594,12 @@ textarea {
   .features__description {
     font-family: 'PTSans', sans-serif;
     margin: 0px auto 55px;
-    width: 490px;
     color: #333;
     font-size: 14px;
     text-align: center; }
   .features__tiles {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
-    -moz-box-align: stretch;
-    -ms-flex-align: stretch;
     align-items: stretch; }
   .features__tile {
     margin: 0px;
@@ -537,7 +607,7 @@ textarea {
     text-transform: uppercase; }
     .features__tile-title {
       margin: 0px auto;
-      width: 160px;
+      width: 40%;
       font-size: 21px;
       line-height: 26px;
       font-family: 'PTSans Bold', sans-serif;
@@ -570,7 +640,7 @@ textarea {
         left: 40px; }
     .features__tile-description {
       margin: 0px auto;
-      width: 270px;
+      width: 67%;
       font-size: 14px;
       line-height: 21px;
       font-family: 'PTSans', sans-serif;
@@ -598,17 +668,19 @@ textarea {
     background: url(../images/photo-city@1x.jpg) center center no-repeat;
     min-height: 256px;
     width: 66%; }
-    @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+    @media (min-resolution: 1.5dppx) {
       .features__tile:nth-child(2) {
-        background: url(../images/photo-city@2x.jpg) center center no-repeat 50%; } }
+        background: url(../images/photo-city@2x.jpg) center center/100% 100% no-repeat;
+        background-size: 100% 100%; } }
   .features__tile:nth-child(3) {
     background-color: #fff;
     min-height: 330px;
     width: 33%; }
     .features__tile:nth-child(3) .features__tile-icon {
-      background: url(../images/icon-house-black.svg) center center no-repeat; }
+      font-size: 74px;
+      text-align: center; }
       .features__tile:nth-child(3) .features__tile-icon:hover {
-        background: url(../images/icon-house-blue.svg) center center no-repeat; }
+        color: #81b3d2; }
     .features__tile:nth-child(3) .features__tile-title {
       margin-bottom: 27px; }
     .features__tile:nth-child(3) .features__tile-description {
@@ -618,9 +690,15 @@ textarea {
     min-height: 330px;
     width: 33%; }
     .features__tile:nth-child(4) .features__tile-icon {
-      background: url(../images/icon-burger-black.png) center center no-repeat; }
+      background-image: url(../images/sprite.png);
+      background-position: 0px 0px;
+      width: 74px;
+      height: 70px; }
       .features__tile:nth-child(4) .features__tile-icon:hover {
-        background: url(../images/icon-burger-blue.png) center center no-repeat; }
+        background-image: url(../images/sprite.png);
+        background-position: -74px 0px;
+        width: 74px;
+        height: 70px; }
     .features__tile:nth-child(4) .features__tile-title {
       margin-bottom: 27px; }
     .features__tile:nth-child(4) .features__tile-description {
@@ -630,9 +708,10 @@ textarea {
     min-height: 330px;
     width: 33%; }
     .features__tile:nth-child(5) .features__tile-icon {
-      background: url(../images/icon-gift-black.svg) center center no-repeat; }
+      font-size: 74px;
+      text-align: center; }
       .features__tile:nth-child(5) .features__tile-icon:hover {
-        background: url(../images/icon-gift-blue.svg) center center no-repeat; }
+        color: #81b3d2; }
     .features__tile:nth-child(5) .features__tile-title {
       margin-bottom: 27px; }
     .features__tile:nth-child(5) .features__tile-description {
@@ -642,9 +721,9 @@ textarea {
     background: url(../images/photo-bridge@1x.jpg) center center no-repeat;
     min-height: 256px;
     width: 66%; }
-    @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+    @media (min-resolution: 1.5dppx) {
       .features__tile:nth-child(6) {
-        background: url(../images/photo-bridge@2x.jpg) center center no-repeat 50%; } }
+        background: url(../images/photo-bridge@2x.jpg) center center/100% 100% no-repeat; } }
   .features__tile:nth-child(7) {
     background-color: #81b3d2;
     min-height: 256px;
@@ -717,7 +796,8 @@ textarea {
     font-size: 30px;
     margin: 55px auto 35px; }
   .map__description {
-    width: 420px;
+    width: 80%;
+    max-width: 420px;
     font-family: 'PTSans', sans-serif;
     font-size: 14px;
     line-height: 24px;
@@ -728,20 +808,8 @@ textarea {
     height: 594px; }
 
 .social-links {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
   align-items: center; }
   .social-links__social-link {
     position: relative;
@@ -761,86 +829,45 @@ textarea {
     margin-left: -10px;
     margin-top: -10px;
     width: 20px;
-    height: 20px; }
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff; }
   .social-links__social-link:active [class^=social-links__icon] {
     opacity: .5; }
-  .social-links__icon--twitter {
-    background: url(../images/icon-twitter.svg) center center no-repeat; }
-  .social-links__icon--facebook {
-    background: url(../images/icon-facebook.svg) center center no-repeat; }
-  .social-links__icon--youtube {
-    background: url(../images/icon-youtube.svg) center center no-repeat; }
 
 .copyright {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   font-family: 'PTSans', sans-serif;
   font-size: 14px;
   text-transform: uppercase; }
   .copyright__by {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
     align-items: center; }
   .copyright__for {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
     align-items: center; }
   .copyright [class^='copyright__icon'] {
     display: block;
     width: 45px;
-    height: 35px; }
-  .copyright__icon--glukhanko {
-    background: url(../images/logo-glukhanko-black.svg) center center no-repeat; }
-    .copyright__icon--glukhanko:hover {
-      background-image: url(../images/logo-glukhanko-blue.svg); }
-    .copyright__icon--glukhanko:active {
-      background-image: url(../images/logo-glukhanko-gray.svg); }
-  .copyright__icon--htmlacademy {
-    background: url(../images/logo-htmlacademy-black.svg) center center no-repeat; }
-    .copyright__icon--htmlacademy:hover {
-      background-image: url(../images/logo-htmlacademy-blue.svg); }
-    .copyright__icon--htmlacademy:active {
-      background-image: url(../images/logo-htmlacademy-gray.svg); }
+    height: 35px;
+    font-size: 30px;
+    text-align: center;
+    color: #000; }
+    .copyright [class^='copyright__icon']:hover {
+      color: #81b3d2;
+      cursor: pointer; }
+    .copyright [class^='copyright__icon']:active {
+      color: #bdbbbc; }
 
 .footer {
   position: relative;
   margin-top: -120px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  wrap: nowrap;
+  flex-wrap: wrap;
   min-height: 120px;
   background-color: rgba(255, 255, 255, 0.8); }
   .footer__tag {
@@ -852,11 +879,12 @@ textarea {
 .hotel-form {
   display: block;
   position: absolute;
-  width: 568px;
+  width: 66%;
+  max-width: 568px;
   min-height: 480px;
-  left: 50%;
+  left: 0px;
   top: 222px;
-  margin-left: -284px;
+  margin-left: 284px;
   background-color: #fff;
   z-index: 30;
   text-transform: uppercase; }
@@ -870,116 +898,118 @@ textarea {
     font-size: 21px;
     padding-top: 32px; }
   .hotel-form__content {
-    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     min-height: 394px;
     padding: 55px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
     align-items: center; }
-  .hotel-form__icon-calendar--entry-date {
+  .hotel-form__calendar-entry-date {
     display: block;
     position: absolute;
-    top: -2px;
-    left: 430px;
-    width: 20px;
-    height: 22px;
-    background: url(../images/icon-calendar-gray.svg) center center no-repeat; }
-    .hotel-form__icon-calendar--entry-date:hover {
-      background-image: url(../images/icon-calendar-black.svg);
-      cursor: pointer; }
-    .hotel-form__icon-calendar--entry-date:active {
-      background-image: url(../images/icon-calendar-blue.svg); }
-  .hotel-form__icon-calendar--exit-date {
-    display: block;
-    position: absolute;
-    top: -2px;
-    left: 430px;
-    width: 20px;
-    height: 22px;
-    background: url(../images/icon-calendar-gray.svg) center center no-repeat; }
-    .hotel-form__icon-calendar--exit-date:hover {
-      background-image: url(../images/icon-calendar-black.svg);
-      cursor: pointer; }
-    .hotel-form__icon-calendar--exit-date:active {
-      background-image: url(../images/icon-calendar-blue.svg); }
-  .hotel-form__icon-minus--adults {
-    display: block;
-    position: absolute;
-    top: -5px;
-    left: 130px;
-    width: 10px;
+    top: 10px;
+    right: 5px;
+    font-size: 20px;
+    width: 30px;
     height: 30px;
-    background: url(../images/icon-minus-gray.svg) center center no-repeat; }
-    .hotel-form__icon-minus--adults:hover {
-      background-image: url(../images/icon-minus-black.svg);
-      cursor: pointer; }
-    .hotel-form__icon-minus--adults:active {
-      background-image: url(../images/icon-minus-blue.svg); }
-  .hotel-form__icon-plus--adults {
+    text-align: center;
+    color: #b2b2b2; }
+    .hotel-form__calendar-entry-date:hover {
+      cursor: pointer;
+      color: #000; }
+    .hotel-form__calendar-entry-date:active {
+      color: #81b3d2; }
+  .hotel-form__calendar-exit-date {
     display: block;
     position: absolute;
-    top: -5px;
-    left: 197px;
-    width: 10px;
+    top: 10px;
+    right: 5px;
+    font-size: 20px;
+    width: 30px;
     height: 30px;
-    background: url(../images/icon-plus-gray.svg) center center no-repeat; }
-    .hotel-form__icon-plus--adults:hover {
-      background-image: url(../images/icon-plus-black.svg);
-      cursor: pointer; }
-    .hotel-form__icon-plus--adults:active {
-      background-image: url(../images/icon-plus-blue.svg); }
-  .hotel-form__icon-minus--children {
+    text-align: center;
+    color: #b2b2b2; }
+    .hotel-form__calendar-exit-date:hover {
+      cursor: pointer;
+      color: #000; }
+    .hotel-form__calendar-exit-date:active {
+      color: #81b3d2; }
+  .hotel-form__plus-children {
     display: block;
     position: absolute;
-    top: -5px;
-    left: 130px;
-    width: 10px;
+    top: 15px;
+    right: 0px;
+    font-size: 10px;
+    width: 30px;
     height: 30px;
-    background: url(../images/icon-minus-gray.svg) center center no-repeat; }
-    .hotel-form__icon-minus--children:hover {
-      background-image: url(../images/icon-minus-black.svg);
-      cursor: pointer; }
-    .hotel-form__icon-minus--children:active {
-      background-image: url(../images/icon-minus-blue.svg); }
-  .hotel-form__icon-plus--children {
+    text-align: center;
+    color: #b2b2b2; }
+    .hotel-form__plus-children:hover {
+      cursor: pointer;
+      color: #000; }
+    .hotel-form__plus-children:active {
+      color: #81b3d2; }
+  .hotel-form__minus-children {
     display: block;
     position: absolute;
-    top: -5px;
-    left: 197px;
-    width: 10px;
+    top: 15px;
+    left: 0px;
+    font-size: 10px;
+    width: 30px;
     height: 30px;
-    background: url(../images/icon-plus-gray.svg) center center no-repeat; }
-    .hotel-form__icon-plus--children:hover {
-      background-image: url(../images/icon-plus-black.svg);
-      cursor: pointer; }
-    .hotel-form__icon-plus--children:active {
-      background-image: url(../images/icon-plus-blue.svg); }
+    text-align: center;
+    color: #b2b2b2; }
+    .hotel-form__minus-children:hover {
+      cursor: pointer;
+      color: #000; }
+    .hotel-form__minus-children:active {
+      color: #81b3d2; }
+  .hotel-form__plus-adults {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    font-size: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #b2b2b2; }
+    .hotel-form__plus-adults:hover {
+      cursor: pointer;
+      color: #000; }
+    .hotel-form__plus-adults:active {
+      color: #81b3d2; }
+  .hotel-form__minus-adults {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    font-size: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #b2b2b2; }
+    .hotel-form__minus-adults:hover {
+      cursor: pointer;
+      color: #000; }
+    .hotel-form__minus-adults:active {
+      color: #81b3d2; }
   .hotel-form [class^='hotel-form__label'] {
     display: block;
     position: relative;
-    width: 110px;
+    width: 25%;
     font-family: 'PTSans Bold', sans-serif;
     font-weight: bold;
     font-size: 14px;
-    color: #000; }
+    color: #000;
+    text-align: left; }
+  .hotel-form [class^='hotel-form__container-input'] {
+    width: 75%;
+    position: relative; }
   .hotel-form [class^='hotel-form__input'] {
     display: block;
-    width: 348px;
+    width: 100%;
     text-transform: uppercase;
     font-family: 'PTSans Bold', sans-serif;
     font-weight: bold;
@@ -993,11 +1023,18 @@ textarea {
       background: #ebebeb; }
     .hotel-form [class^='hotel-form__input']:focus {
       outline: 2px solid #ebebeb; }
-  .hotel-form .hotel-form__input--adults {
-    width: 113px;
+  .hotel-form .hotel-form__label--children {
+    margin-left: 5%;
     text-align: center; }
+  .hotel-form .hotel-form__container-input--adults {
+    width: 20%; }
+  .hotel-form .hotel-form__input--adults {
+    text-align: center; }
+  .hotel-form .hotel-form__label--children {
+    margin-right: 5%; }
+  .hotel-form .hotel-form__container-input--children {
+    width: 20%; }
   .hotel-form .hotel-form__input--children {
-    width: 113px;
     text-align: center; }
   .hotel-form .hotel-form__input--submit {
     width: 100%;
@@ -1007,47 +1044,35 @@ textarea {
     color: white;
     font-size: 21px; }
     .hotel-form .hotel-form__input--submit:hover {
-      background-color: #669ec0; }
-    .hotel-form .hotel-form__input--submit:hover {
+      background-color: #669ec0;
+      cursor: pointer; }
+    .hotel-form .hotel-form__input--submit:active {
       background-color: #5496bd;
       color: rgba(255, 255, 255, 0.5); }
 
-.crutch {
-  background: url(../images/icon-burger-black.png), url(../images/icon-burger-blue.png), url(../images/icon-calendar-black.svg), url(../images/icon-calendar-blue.svg), url(../images/icon-calendar-gray.svg), url(../images/icon-facebook.svg), url(../images/icon-gift-black.svg), url(../images/icon-gift-blue.svg), url(../images/icon-house-black.svg), url(../images/icon-house-blue.svg), url(../images/icon-minus-black.svg), url(../images/icon-minus-blue.svg), url(../images/icon-minus-gray.svg), url(../images/icon-plus-black.svg), url(../images/icon-plus-blue.svg), url(../images/icon-plus-gray.svg), url(../images/icon-twitter.svg), url(../images/icon-youtube.svg), url(../images/logo-glukhanko-black.svg), url(../images/logo-glukhanko-blue.svg), url(../images/logo-glukhanko-gray.svg), url(../images/logo-htmlacademy-black.svg), url(../images/logo-htmlacademy-blue.svg), url(../images/logo-htmlacademy-gray.svg);
-  position: absolute;
-  top: -100px;
-  width: 30px;
-  height: 30px; }
-
 body {
   background-color: #f2f2f2;
-  min-width: 1200px; }
-  @media (max-width: 850px) {
-    body {
-      min-width: 768px; } }
+  /*   @media(max-width: 850px) {
+  min-width: 768px;
+} */ }
 
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
 .container {
-  width: 1200px;
+  width: 100%;
   max-width: 1200px;
   margin: 0px auto;
-  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); }
-  @media (max-width: 850px) {
-    .container {
-      max-width: 768px;
-      width: 768px;
-      margin: 0px auto; } }
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  /*   @media(max-width: 850px) {
+  max-width: 768px;
+  width: 768px;
+  margin: 0px auto;
+} */ }
 
 /* @media(max-width: 800px) {
   .container {

@@ -27,6 +27,9 @@
     margin-top: -10px;
     width: 20px;
     height: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
   }
 
   &__social-link:active [class^=social-links__icon] {
@@ -34,15 +37,12 @@
   }
 
   &__icon--twitter {
-    background: url(../images/icon-twitter.svg) center center no-repeat;
   }
 
   &__icon--facebook {
-    background: url(../images/icon-facebook.svg) center center no-repeat;
   }
 
   &__icon--youtube {
-    background: url(../images/icon-youtube.svg) center center no-repeat;
   }
 
 

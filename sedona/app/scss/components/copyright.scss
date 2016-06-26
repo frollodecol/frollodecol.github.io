@@ -19,29 +19,33 @@
     display: block;
     width: 45px;
     height: 35px;
+    font-size: 30px;
+    text-align: center;
+    color: #000;
+    
+    &:hover {
+      color: #81b3d2;
+      cursor: pointer;
+    }
 
+    &:active {
+      color: #bdbbbc;
+    }
   }
 
   &__icon--glukhanko {
-    background: url(../images/logo-glukhanko-black.svg) center center no-repeat;
-
     &:hover {
-      background-image: url(../images/logo-glukhanko-blue.svg) 
     }
     &:active {
-      background-image: url(../images/logo-glukhanko-gray.svg) 
     }
   }
 
 
   &__icon--htmlacademy {
-    background: url(../images/logo-htmlacademy-black.svg) center center no-repeat;
 
     &:hover {
-      background-image: url(../images/logo-htmlacademy-blue.svg) 
     }
     &:active {
-      background-image: url(../images/logo-htmlacademy-gray.svg) 
     }
   }
 }

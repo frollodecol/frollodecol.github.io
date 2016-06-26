@@ -1,4 +1,6 @@
 @import 'components/fonts.scss';
+@import 'components/icon-font-sedona.scss';
+@import 'components/sprite.scss';
 @import 'components/normalize.scss';
 @import 'components/top-menu.scss';
 @import 'components/welcome.scss';
@@ -6,15 +8,15 @@
 @import 'components/map.scss';
 @import 'components/footer.scss';
 @import 'components/hotel-form.scss';
-@import 'components/crutch.scss';
+//@import 'components/crutch.scss';
+
 
 body {
   background-color: #f2f2f2;
-  min-width: 1200px;
 
-  @media(max-width: 850px) {
-    min-width: 768px;
-  }
+/*   @media(max-width: 850px) {
+  min-width: 768px;
+} */
 }
 
 html {
@@ -25,16 +27,17 @@ html {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   max-width: 1200px;
   margin: 0px auto;
   box-shadow: 0px 0px 20px rgba(#000, .2);
+  overflow: hidden;
   
-  @media(max-width: 850px) {
-    max-width: 768px;
-    width: 768px;
-    margin: 0px auto;
-  }
+/*   @media(max-width: 850px) {
+  max-width: 768px;
+  width: 768px;
+  margin: 0px auto;
+} */
 }
 
 /* @media(max-width: 800px) {

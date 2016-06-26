@@ -11,7 +11,6 @@
   &__title {
     font-family: 'PTSans Bold', sans-serif;
     margin: 65px auto 35px;
-    width: 450px;
     min-height: 48px;
     line-height: 26px;   
     color: #000;
@@ -23,7 +22,6 @@
   &__description {
     font-family: 'PTSans', sans-serif;
     margin: 0px auto 55px;
-    width: 490px;
     color: #333;
     font-size: 14px;
     text-align: center;
@@ -42,7 +40,7 @@
 
     &-title {
       margin: 0px auto;
-      width: 160px; 
+      width: 40%;
       font-size: 21px;
       line-height: 26px;
       font-family: 'PTSans Bold', sans-serif;
@@ -84,7 +82,7 @@
 
     &-description {
       margin: 0px auto;
-      width: 270px;
+      width: 67%;
       font-size: 14px;
       line-height: 21px;
       font-family: 'PTSans', sans-serif;
@@ -131,7 +129,8 @@
     width: 66%;
 
     @media (min-resolution: 1.5dppx) {
-      background: url(../images/photo-city@2x.jpg) center center no-repeat 50%;
+      background: url(../images/photo-city@2x.jpg) center center / 100% 100% no-repeat;
+      background-size: 100% 100%;
     }
 
   }
@@ -143,10 +142,10 @@
     width: 33%;
 
     .features__tile-icon {
-      background: url(../images/icon-house-black.svg) center center no-repeat;
-
+        font-size: 74px;
+        text-align: center;
       &:hover {
-        background: url(../images/icon-house-blue.svg) center center no-repeat;
+        color: #81b3d2;
       }
 
     }
@@ -167,10 +166,9 @@
     width: 33%;
 
     .features__tile-icon {
-      background: url(../images/icon-burger-black.png) center center no-repeat;
-
+      @include sprite($icon-burger-black);
       &:hover {
-        background: url(../images/icon-burger-blue.png) center center no-repeat;
+        @include sprite($icon-burger-blue);
       }
 
     }
@@ -191,10 +189,11 @@
     width: 33%;
 
     .features__tile-icon {
-      background: url(../images/icon-gift-black.svg) center center no-repeat;
-
+      font-size: 74px;
+      text-align: center;
       &:hover {
-        background: url(../images/icon-gift-blue.svg) center center no-repeat;
+        color: #81b3d2;
+
       }
 
     }
@@ -216,7 +215,7 @@
     width: 66%;
 
     @media (min-resolution: 1.5dppx) {
-      background: url(../images/photo-bridge@2x.jpg) center center no-repeat 50%;
+      background: url(../images/photo-bridge@2x.jpg) center center / 100% 100% no-repeat;
     }
 
   }

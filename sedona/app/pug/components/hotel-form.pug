@@ -2,19 +2,23 @@ div.hotel-form
   h2.hotel-form__title Поиск гостиницы в седоне
   form.hotel-form__content(action='#' method='post')
     label.hotel-form__label--entry-date(for='') Дата заезда:
-      i.hotel-form__icon-calendar--entry-date
-    input.hotel-form__input--entry-date(type='text' id='exit-date' name='entry-date' value='24 апреля 2014')
+    div.hotel-form__container-input--entry-date
+      i.hotel-form__calendar-entry-date.icon-icon-calendar
+      input.hotel-form__input--entry-date(type='text' id='exit-date' name='entry-date' value='24 апреля 2014')
     label.hotel-form__label--exit-date Дата выезда:
-      i.hotel-form__icon-calendar--entry-date
-    input.hotel-form__input--exit-date(type='text' id='exit-date' name='exit-date' value='4 июля 2014')
+    div.hotel-form__container-input--exit-date
+      i.hotel-form__calendar-exit-date.icon-icon-calendar
+      input.hotel-form__input--exit-date(type='text' id='exit-date' name='exit-date' value='4 июля 2014')
     label.hotel-form__label--adults Взрослые:
-      i.hotel-form__icon-minus--adults
-      i.hotel-form__icon-plus--adults
-    input.hotel-form__input--adults(type-'text' id='adults' name='adults' value='2')
+    div.hotel-form__container-input--adults
+      i.hotel-form__plus-adults.icon-icon-plus
+      i.hotel-form__minus-adults.icon-icon-minus 
+      input.hotel-form__input--adults(type-'text' id='adults' name='adults' value='2')
     label.hotel-form__label--children Дети:
-      i.hotel-form__icon-minus--children
-      i.hotel-form__icon-plus--children
-    input.hotel-form__input--children(type='text' id='children' name='children' value='0')
+    div.hotel-form__container-input--children   
+      i.hotel-form__plus-children.icon-icon-plus
+      i.hotel-form__minus-children.icon-icon-minus 
+      input.hotel-form__input--children(type='text' id='children' name='children' value='0')
     input.hotel-form__input--submit(type='submit' value='Найти')
 
 
