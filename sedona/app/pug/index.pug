@@ -8,7 +8,7 @@ html
     link(rel='stylesheet' href='css/style.css')
     //endbuild
   body
-    include components/crutch.pug
+    include components/forIE.pug
     div.container
         include components/top-menu.pug
         include components/welcome.pug
@@ -17,5 +17,6 @@ html
         include components/footer.pug
     script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD0WN25pem6O-d9YZky36BUjanDNxlEgjg")
     //build:js js/main.min.js
+    script(type="text/javascript" src="js/forIE.js")
     script(type="text/javascript" src="js/main.js")
     //endbuild

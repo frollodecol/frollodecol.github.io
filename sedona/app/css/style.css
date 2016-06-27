@@ -10,6 +10,37 @@
   font-family: 'PTSans Italic';
   src: url(../fonts/PT_Sans-Web-italic.ttf); }
 
+.forIE {
+  position: fixed;
+  display: none;
+  width: 100%;
+  z-index: 150;
+  left: 0px;
+  top: 0px;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.7);
+  min-height: 50px;
+  text-align: center;
+  color: #fff; }
+  .forIE .icon-icon-cross {
+    position: absolute;
+    right: 10px;
+    top: 10px; }
+    .forIE .icon-icon-cross:hover {
+      opacity: .7;
+      cursor: pointer; }
+    .forIE .icon-icon-cross:active {
+      opacity: .5;
+      cursor: pointer; }
+  .forIE a {
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none; }
+    .forIE a:hover {
+      opacity: .7; }
+    .forIE a:active {
+      opacity: .5; }
+
 @font-face {
   font-family: 'Icon Font Sedona';
   src: url(../fonts/icon-font-sedona.ttf);
@@ -888,7 +919,7 @@ textarea {
 .hotel-form {
   display: block;
   position: absolute;
-  width: 66%;
+  width: 100%;
   max-width: 568px;
   min-height: 480px;
   left: 0px;
@@ -1008,6 +1039,7 @@ textarea {
     display: block;
     position: relative;
     width: 25%;
+    margin-bottom: 30px;
     font-family: 'PTSans Bold', sans-serif;
     font-weight: bold;
     font-size: 14px;
@@ -1015,7 +1047,8 @@ textarea {
     text-align: left; }
   .hotel-form [class^='hotel-form__container-input'] {
     width: 75%;
-    position: relative; }
+    position: relative;
+    margin-bottom: 30px; }
   .hotel-form [class^='hotel-form__input'] {
     display: block;
     width: 100%;
@@ -1047,6 +1080,7 @@ textarea {
     text-align: center; }
   .hotel-form .hotel-form__input--submit {
     width: 100%;
+    margin-top: 20px;
     min-height: 58px;
     text-align: center;
     background-color: #81b3d2;
@@ -1060,10 +1094,7 @@ textarea {
       color: rgba(255, 255, 255, 0.5); }
 
 body {
-  background-color: #f2f2f2;
-  /*   @media(max-width: 850px) {
-  min-width: 768px;
-} */ }
+  background-color: #f2f2f2; }
 
 html {
   box-sizing: border-box; }
@@ -1076,20 +1107,4 @@ html {
   max-width: 1200px;
   margin: 0px auto;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  /*   @media(max-width: 850px) {
-  max-width: 768px;
-  width: 768px;
-  margin: 0px auto;
-} */ }
-
-/* @media(max-width: 800px) {
-  .container {
-    max-width: 768px;
-    width: 768px;
-    margin: 0px auto;
-  }
-  body {
-    min-width: 768px;
-  }
-} */
+  overflow: hidden; }

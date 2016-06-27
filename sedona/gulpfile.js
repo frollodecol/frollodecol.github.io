@@ -18,6 +18,7 @@ var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var path = require('path');
 var inject = require('gulp-inject');
+var gcmq = require('gulp-group-css-media-queries');
 
 // Basic Gulp task syntax
 gulp.task('hello', function() {
@@ -159,22 +160,30 @@ gulp.task('svgstore', function () {
         .pipe(gulp.dest('app/images'));
 });
 
+// combine media-queries
+ 
+gulp.task('gcmq', function () {
+  gulp.src('app/css/style.css')
+    .pipe(gcmq())
+    .pipe(gulp.dest('app/css'));
+});
+
 // Build Sequences
 // ---------------
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'pug', 'browserSync', 'watch'], 'autoprefixer',
+  runSequence(['sass', 'pug', 'browserSync', 'watch'], 'autoprefixer', 'gcmq', 
     callback
   )
-})
+});
 
 gulp.task('build', function(callback) {
   runSequence(
     'clean:dist', 'sprite', 'svgstore', 
-    ['sass','pug',  'useref', 'images', 'fonts'], 'autoprefixerBuild',
+    ['sass','pug',  'useref', 'images', 'fonts'], 'autoprefixerBuild', 'gcmq', 
     callback
   )
-})
+});
 
 /* <!--build:js js/main.min.js -->
 <!-- endbuild -->

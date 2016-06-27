@@ -1,7 +1,7 @@
 .hotel-form {
   display: block;
   position: absolute;
-  width: 66%;
+  width: 100%;
   max-width: 568px;
   min-height: 480px;
   left: 0px;
@@ -156,6 +156,7 @@
     display: block;
     position: relative;
     width: 25%;
+    margin-bottom: 30px;
     font-family: 'PTSans Bold', sans-serif;
     font-weight: bold;
     font-size: 14px;
@@ -166,6 +167,7 @@
   [class^='hotel-form__container-input'] {
     width: 75%;
     position: relative;
+    margin-bottom: 30px;
   }
   [class^='hotel-form__input'] {
     display: block;
@@ -210,6 +212,7 @@
 
   .hotel-form__input--submit {
     width: 100%;
+    margin-top: 20px;
     min-height: 58px;
     text-align: center;
     background-color: #81b3d2;

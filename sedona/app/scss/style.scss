@@ -1,4 +1,5 @@
 @import 'components/fonts.scss';
+@import 'components/forIE.scss';
 @import 'components/icon-font-sedona.scss';
 @import 'components/sprite.scss';
 @import 'components/normalize.scss';
@@ -13,10 +14,6 @@
 
 body {
   background-color: #f2f2f2;
-
-/*   @media(max-width: 850px) {
-  min-width: 768px;
-} */
 }
 
 html {
@@ -32,22 +29,4 @@ html {
   margin: 0px auto;
   box-shadow: 0px 0px 20px rgba(#000, .2);
   overflow: hidden;
-  
-/*   @media(max-width: 850px) {
-  max-width: 768px;
-  width: 768px;
-  margin: 0px auto;
-} */
 }
-
-/* @media(max-width: 800px) {
-  .container {
-    max-width: 768px;
-    width: 768px;
-    margin: 0px auto;
-  }
-  body {
-    min-width: 768px;
-  }
-} */
-
