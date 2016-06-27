@@ -25,27 +25,31 @@
   }
 
   &__welcome {
+    display: block;
     margin: 77px auto 10px;
-    height: 45px;
-    background: url(../images/text-welcome.svg) center center no-repeat;  
+    height: 45px; 
+    fill: #81b3d2;
   }
 
   &__to-the-gorgeous {
+    display: block;
     margin: 0px auto 60px;
     height: 26px;
-    background: url(../images/text-tothegorgeous.svg) center center no-repeat; 
+    fill: #766357;
   }
 
   &__sedona {
+    display: block;
     margin: 0px auto 55px;
     height: 80px;
-    background: url(../images/text-sedona.svg) center center no-repeat; 
+    fill: #fff;
   }
 
-    &__because-canyon {
+  &__because-canyon {
+    display: block;
     margin: 0px auto;
     height: 80px;
-    background: url(../images/text-becausecanyon.svg) center center no-repeat; 
+    fill: #fff;
   }
 
 }

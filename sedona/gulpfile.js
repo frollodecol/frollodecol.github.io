@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var pug = require('gulp-pug');
 var autoprefixer = require('gulp-autoprefixer');
+var autoprefixerBuild = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
@@ -13,6 +14,10 @@ var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
 var spritesmith = require('gulp.spritesmith');
+var svgstore = require('gulp-svgstore');
+var svgmin = require('gulp-svgmin');
+var path = require('path');
+var inject = require('gulp-inject');
 
 // Basic Gulp task syntax
 gulp.task('hello', function() {
@@ -110,6 +115,15 @@ gulp.task('autoprefixer', function () {
     .pipe(gulp.dest('app/css'));
 });
 
+gulp.task('autoprefixerBuild', function () {
+  return gulp.src('dist/css/style.min.css')
+    .pipe(autoprefixerBuild({
+      browsers: ['> 0.01%'],
+      cascade: false
+    }))
+    .pipe(gulp.dest('dist/css'));
+});
+
 //Спрайты 
 
 gulp.task('sprite', function() {
@@ -125,6 +139,26 @@ gulp.task('sprite', function() {
     spriteData.css.pipe(gulp.dest('app/scss/components')); // путь, куда сохраняем стили
 });
 
+// SVG - спрайты 
+
+gulp.task('svgstore', function () {
+    return gulp
+        .src('app/images/sprite-svg/*.svg')
+        .pipe(svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+        .pipe(svgstore())
+        .pipe(gulp.dest('app/images'));
+});
+
 // Build Sequences
 // ---------------
 
@@ -136,8 +170,8 @@ gulp.task('default', function(callback) {
 
 gulp.task('build', function(callback) {
   runSequence(
-    'clean:dist', 'sprite', 
-    ['sass','pug',  'useref', 'images', 'fonts'], 'autoprefixer',
+    'clean:dist', 'sprite', 'svgstore', 
+    ['sass','pug',  'useref', 'images', 'fonts'], 'autoprefixerBuild',
     callback
   )
 })

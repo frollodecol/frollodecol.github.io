@@ -325,8 +325,6 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -420,8 +418,6 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -447,8 +443,6 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -503,28 +497,10 @@ textarea {
   font-family: 'PTSans Bold', sans-serif;
   font-weight: bold; }
   .top-menu__list {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -moz-box-orient: horizontal;
-    -moz-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 0px;
     padding: 0px;
@@ -533,21 +509,23 @@ textarea {
     position: relative;
     z-index: 20;
     width: 137px;
-    height: 70px;
-    background: url("../images/form-logo-triangle.svg") center top no-repeat; }
+    height: 70px; }
+    .top-menu__logo-form-logo-triangle {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      fill: #81b3d2;
+      z-index: -10; }
     .top-menu__logo--second {
       margin: 0px auto;
       width: 50%;
       height: 80%;
       background: url("../images/logo-sedona@1x.png") center top no-repeat;
-      -webkit-background-size: 100% 100%;
-      -moz-background-size: 100% 100%;
-      -o-background-size: 100% 100%;
       background-size: 100% 100%; }
-      @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+      @media (min-resolution: 1.5dppx) {
         .top-menu__logo--second {
           background: url("../images/logo-sedona@2x.png") center top/100% 100% no-repeat; } }
-      @media (-webkit-min-device-pixel-ratio: 2.5), (-o-min-device-pixel-ratio: 5/2), (min-resolution: 2.5dppx) {
+      @media (min-resolution: 2.5dppx) {
         .top-menu__logo--second {
           background: url("../images/logo-sedona@3x.png") center top/100% 100% no-repeat; } }
   .top-menu__item {
@@ -568,7 +546,7 @@ textarea {
   height: 508px;
   background: url(../images/photo-background@1x.jpg) center 20% no-repeat;
   border-bottom: 0px solid #fefefe; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  @media (min-resolution: 1.5dppx) {
     .welcome {
       background: url(../images/photo-background@2x.jpg) center center/100% 100% no-repeat; } }
   .welcome::before {
@@ -584,26 +562,27 @@ textarea {
     left: 0px;
     top: 451px;
     background: url(../images/welcome-shape.png) center center no-repeat;
-    -webkit-background-size: 101% 57px;
-    -moz-background-size: 101% 57px;
-    -o-background-size: 101% 57px;
     background-size: 101% 57px; }
   .welcome__welcome {
+    display: block;
     margin: 77px auto 10px;
     height: 45px;
-    background: url(../images/text-welcome.svg) center center no-repeat; }
+    fill: #81b3d2; }
   .welcome__to-the-gorgeous {
+    display: block;
     margin: 0px auto 60px;
     height: 26px;
-    background: url(../images/text-tothegorgeous.svg) center center no-repeat; }
+    fill: #766357; }
   .welcome__sedona {
+    display: block;
     margin: 0px auto 55px;
     height: 80px;
-    background: url(../images/text-sedona.svg) center center no-repeat; }
+    fill: #fff; }
   .welcome__because-canyon {
+    display: block;
     margin: 0px auto;
     height: 80px;
-    background: url(../images/text-becausecanyon.svg) center center no-repeat; }
+    fill: #fff; }
 
 .features {
   background-color: #fff;
@@ -628,18 +607,8 @@ textarea {
     font-size: 14px;
     text-align: center; }
   .features__tiles {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
-    -moz-box-align: stretch;
-    -ms-flex-align: stretch;
     align-items: stretch; }
   .features__tile {
     margin: 0px;
@@ -708,12 +677,9 @@ textarea {
     background: url(../images/photo-city@1x.jpg) center center no-repeat;
     min-height: 256px;
     width: 66%; }
-    @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+    @media (min-resolution: 1.5dppx) {
       .features__tile:nth-child(2) {
         background: url(../images/photo-city@2x.jpg) center center/100% 100% no-repeat;
-        -webkit-background-size: 100% 100%;
-        -moz-background-size: 100% 100%;
-        -o-background-size: 100% 100%;
         background-size: 100% 100%; } }
   .features__tile:nth-child(3) {
     background-color: #fff;
@@ -764,7 +730,7 @@ textarea {
     background: url(../images/photo-bridge@1x.jpg) center center no-repeat;
     min-height: 256px;
     width: 66%; }
-    @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+    @media (min-resolution: 1.5dppx) {
       .features__tile:nth-child(6) {
         background: url(../images/photo-bridge@2x.jpg) center center/100% 100% no-repeat; } }
   .features__tile:nth-child(7) {
@@ -851,20 +817,8 @@ textarea {
     height: 594px; }
 
 .social-links {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
   align-items: center; }
   .social-links__social-link {
     position: relative;
@@ -892,40 +846,16 @@ textarea {
     opacity: .5; }
 
 .copyright {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   font-family: 'PTSans', sans-serif;
   font-size: 14px;
   text-transform: uppercase; }
   .copyright__by {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
     align-items: center; }
   .copyright__for {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
     align-items: center; }
   .copyright [class^='copyright__icon'] {
     display: block;
@@ -943,21 +873,9 @@ textarea {
 .footer {
   position: relative;
   margin-top: -120px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   min-height: 120px;
   background-color: rgba(255, 255, 255, 0.8); }
@@ -989,26 +907,12 @@ textarea {
     font-size: 21px;
     padding-top: 32px; }
   .hotel-form__content {
-    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     min-height: 394px;
     padding: 55px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
     align-items: center; }
   .hotel-form__calendar-entry-date {
     display: block;
@@ -1162,21 +1066,15 @@ body {
 } */ }
 
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0px auto;
-  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   /*   @media(max-width: 850px) {

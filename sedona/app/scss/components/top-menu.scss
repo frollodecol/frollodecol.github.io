@@ -23,7 +23,14 @@
     z-index: 20;
     width: 137px;
     height: 70px;
-    background: url('../images/form-logo-triangle.svg') center top no-repeat;
+
+    &-form-logo-triangle {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      fill: #81b3d2;
+      z-index: -10;
+    }
     
     &--second {
       margin: 0px auto;
