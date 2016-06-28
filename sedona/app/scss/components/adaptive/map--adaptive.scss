@@ -1,0 +1,15 @@
+@media (max-width: 400px) {
+  &__title {
+    font-size: 21px;
+    width: 75%;
+    margin: 30px auto 30px;
+  }
+  &__description {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  
+  #map__google-map{
+  } 
+}

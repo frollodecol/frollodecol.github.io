@@ -134,6 +134,7 @@ gulp.task('sprite', function() {
                 imgName: 'sprite.png',
                 cssName: 'sprite.scss',
                 imgPath: '../images/sprite.png',
+                padding: 10,
             }));
 
     spriteData.img.pipe(gulp.dest('app/images/')); // путь, куда сохраняем картинку

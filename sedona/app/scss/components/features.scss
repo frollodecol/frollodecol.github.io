@@ -167,8 +167,10 @@
 
     .features__tile-icon {
       @include sprite($icon-burger-black);
+      background-repeat: no-repeat;
       &:hover {
         @include sprite($icon-burger-blue);
+        background-repeat: no-repeat;
       }
 
     }
@@ -315,5 +317,5 @@
     }
   }
 
-
+  @import 'adaptive/features--adaptive.scss';
 }

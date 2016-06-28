@@ -1,0 +1,9 @@
+@media (max-width: 400px) {
+  &__because-canyon {
+    width: 66%;
+  }
+  &::after {
+    top: 451px;
+    background-size: 250% 57px;
+  }
+} 

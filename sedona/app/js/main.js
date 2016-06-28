@@ -1,7 +1,9 @@
 function centeringAbsolutePositionElement() {
-  setTimeout( function() {
-    hotelForm.style.marginLeft = (container.clientWidth - hotelForm.clientWidth) / 2 + 'px';
-  }, 200);  
+  if (document.documentElement.clientWidth > 400) {
+    setTimeout( function() {
+        hotelForm.style.marginLeft = (container.clientWidth - hotelForm.clientWidth) / 2 + 'px';
+    }, 200)
+  };
 };
 function initialize() {
   var mapProp = {

@@ -1,0 +1,22 @@
+@media (max-width: 400px) {
+  flex-flow: column wrap;
+  justify-content: space-around;
+  margin-top: -240px;
+  height: 230px;
+  z-index: 50;
+
+  &__tag {
+    //margin-top: 30px;
+    //margin-bottom: 40px;
+    flex-shrink: 1;
+  }
+  
+  .social-links {
+    //margin-bottom: 40px;
+    flex-shrink: 1;
+  }
+  .copyright {
+    //margin-bottom: 25px;
+    flex-shrink: 1;
+  }
+}

@@ -12,14 +12,16 @@
     </div>
     <div class="container">
       <header class="top-menu">
-        <ul class="top-menu__list">
+        <ul class="top-menu__list"><i class="top-menu__cross icon-icon-cross"></i>
           <li class="top-menu__item"><a class="top-menu__link top-menu__link--active" href="#">Информация</a></li>
           <li class="top-menu__item"><a class="top-menu__link" href="#">Фото и видео</a></li>
-          <div class="top-menu__logo">
-            <svg class="top-menu__logo-form-logo-triangle">
-              <use xlink:href="images/sprite-svg.svg#form-logo-triangle"></use>
-            </svg>
-            <div class="top-menu__logo--second"></div>
+          <div class="top-menu__container-logo"><i class="top-menu__menu-button icon-icon-menu"></i>
+            <div class="top-menu__logo">
+              <svg class="top-menu__logo-form-logo-triangle">
+                <use xlink:href="images/sprite-svg.svg#form-logo-triangle"></use>
+              </svg>
+              <div class="top-menu__logo--second"></div>
+            </div>
           </div>
           <li class="top-menu__item"><a class="top-menu__link" href="#">Карта штата</a></li>
           <li class="top-menu__item"><a class="top-menu__link" href="#">Гостиницы             </a></li>
@@ -94,7 +96,6 @@
       <div class="map"> 
         <h2 class="map__title">Заинтересовались?</h2>
         <p class="map__description">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <div id="map__google-map"></div>
         <div class="hotel-form">
           <h2 class="hotel-form__title">Поиск гостиницы в седоне</h2>
           <form class="hotel-form__content" action="#" method="post">
@@ -117,6 +118,7 @@
             <input class="hotel-form__input--submit" type="submit" value="Найти"/>
           </form>
         </div>
+        <div id="map__google-map"></div>
       </div>
       <footer class="footer">
         <div class="footer__tag">#visitsedona</div>
