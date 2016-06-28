@@ -1723,7 +1723,7 @@ html {
 
   .features__tile:nth-child(6) {
     order: 7;
-    background-size: 150%;
+    background-size: 170%;
   }
 
   .features__tile:nth-child(7) {
@@ -1921,7 +1921,7 @@ html {
 
 @media (max-width: 400px) and (min-resolution: 1.5ddpx) {
   .features__tile:nth-child(6) {
-    background-size: 150%;
+    background-size: 170%;
   }
 }
 
