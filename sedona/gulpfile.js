@@ -181,7 +181,7 @@ gulp.task('default', function(callback) {
 gulp.task('build', function(callback) {
   runSequence(
     'clean:dist', 'sprite', 'svgstore', 
-    ['sass','pug',  'useref', 'images', 'fonts'], 'autoprefixerBuild', 'gcmq', 
+    ['pug',  'useref', 'images', 'fonts'], 'sass', 'autoprefixerBuild', 'gcmq', 
     callback
   )
 });
